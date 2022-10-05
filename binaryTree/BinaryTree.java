@@ -132,5 +132,14 @@ public class BinaryTree {
         }
         // end of if
     }
+
+    public String traverseInOrder(Node node) {
+        if (node != null)
+            return traverseInOrder(node.getLeft())+node.getData() + " " + traverseInOrder(node.getRight());
+        else
+            return "";
+    }
+
+
 }
 // end of outer class
