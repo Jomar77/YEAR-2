@@ -3,11 +3,11 @@ package binaryTree;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BinaryTree{
+public class BinaryTree {
 
     public class Node {
-        public Node left, right;
-        public int data;
+        private Node left, right;
+        private int data;
     
         public Node() {
             left = right = null;
@@ -42,9 +42,9 @@ public class BinaryTree{
         public int getData() {
             return data;
         }
-
-        
-    }
+    
+    }   
+    
     private Node root;
 
     public BinaryTree() {
@@ -101,11 +101,11 @@ public class BinaryTree{
             while (!q.isEmpty()) {
                 Node newNode = q.poll();
                 // poll() means remove the present Node
-                hold += newNode.data + " ";
-                if (newNode.left != null)
-                    q.add(newNode.left);
-                if (newNode.right != null)
-                    q.add(newNode.right);
+                hold += newNode.getData() + " ";
+                if (newNode.getLeft() != null)
+                    q.add(newNode.getLeft());
+                if (newNode.getRight()!= null)
+                    q.add(newNode.getRight());
             } // end of while loop
         } // end of else
         return hold;
@@ -133,14 +133,15 @@ public class BinaryTree{
         // end of if
     }
 
-    public String traverseInOrder(Node node) {
+    private String traverseInOrder(BinaryTree.Node node) {
         if (node != null)
-            return traverseInOrder(node.getLeft())+node.getData() + " " + traverseInOrder(node.getRight());
+            return traverseInOrder(node.getLeft()) + node.getData() + " " + traverseInOrder(node.getRight());
         else
             return "";
     }
-    
 
-
+    public String traverseInOrder() {
+        return traverseInOrder(root);
+    }
 }
 // end of outer class

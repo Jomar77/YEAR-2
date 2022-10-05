@@ -4,13 +4,11 @@ public class TestBinary {
     public static void main(String args[]) {
         System.out.println("Test run by : John Sebastian Ablay");
         BinaryTree tree = new BinaryTree();
-        Node root = new Node();
-        root = tree.getRoot();
         System.out.println("---Before Adding Nodes---");
         System.out.println("Empty\t\t: " + tree.isEmpty());
         System.out.println("Number of Nodes\t: " + tree.count());
         System.out.println("Level Order\t: " + tree.printLevelOrder());
-        System.out.println("Traverse Order\t: " + tree.traverseInOrder(root));
+        System.out.println("Traverse Order\t: " + tree.traverseInOrder());
 
         // adding Node to a tree
         tree.addNode(12);
@@ -20,7 +18,7 @@ public class TestBinary {
         System.out.println("Empty\t\t: " + tree.isEmpty());
         System.out.println("Number of Nodes\t: " + tree.count());
         System.out.println("Level Order\t: " + tree.printLevelOrder());
-        System.out.println("Traverse Order\t: " + tree.traverseInOrder(root));
+        System.out.println("Traverse Order\t: " + tree.traverseInOrder());
         // adding Node to a tree
         tree.addNode(25);
         tree.addNode(30);
@@ -29,6 +27,6 @@ public class TestBinary {
         System.out.println("Empty\t\t: " + tree.isEmpty());
         System.out.println("Number of Nodes\t: " + tree.count());
         System.out.println("Level Order\t: " + tree.printLevelOrder());
-        System.out.println("Traverse Order\t: " + tree.traverseInOrder(root));
+        System.out.println("Traverse Order\t: " + tree.traverseInOrder());
     } // end of main
 } // end of class

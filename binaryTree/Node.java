@@ -1,7 +1,8 @@
 package binaryTree;
+
 public class Node {
-    public Node left, right;
-    public int data;
+    private Node left, right;
+    private int data;
 
     public Node() {
         left = right = null;
@@ -13,5 +14,28 @@ public class Node {
         this.data = data;
     }
 
-   
-}
+    public void setLeft(Node LNode) {
+        left = LNode;
+    }
+
+    public void setRight(Node RNode) {
+        right = RNode;
+    }
+
+    public void setData(int data) {
+        this.data = data;
+    }
+
+    public Node getLeft() {
+        return left;
+    }
+
+    public Node getRight() {
+        return right;
+    }
+
+    public int getData() {
+        return data;
+    }
+
+}   
