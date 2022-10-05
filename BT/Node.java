@@ -1,4 +1,3 @@
-package binaryTree;
 public class Node {
     public Node left, right;
     public int data;

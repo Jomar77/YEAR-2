@@ -1,5 +1,6 @@
 package binaryTree;
 
+
 public class TestBinary {
     public static void main(String args[]) {
         System.out.println("Test run by : John Sebastian Ablay");
